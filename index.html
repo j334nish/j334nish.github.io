@@ -1,57 +1,92 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>愛媛大学学生祭 2024_samplehomepage</title>
-    <meta name="description" content="こんにちは！2025年o月o日に愛媛大学oooで学生祭を開催します。ぜひお越しください！">
-    <meta name="keywords" content="愛媛大学, 学祭, 学生祭,2024,2025,homepage_test   ">
     <link rel="stylesheet" href="homepage.css">
+    <title>第47回 愛媛大学医学祭</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="description" content="こんにちは！2025年0月0日に愛媛大学で医学祭を開催します。ぜひお越しください！">
+    <meta name="keywords" content="愛媛大学,愛大, 学祭, 医学祭,2024,2025,homepage_test">
+    <style>
+        .section {
+            padding: 4rem 0;
+            min-height: 50vh;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
 </head>
-
 <body>
-    <header>
-        <div class="logo">
-            <h1>学生祭 2025</h1>
-            <p>楽しい一日をお届けします！</p>
+    <!-- ヘッダー部分 -->
+    <header class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <h1 class="display-4">第47回 愛媛大学医学祭</h1>
+            <p class="lead">2025年 0月0日〜0日</p>
+            <nav class="nav justify-content-center">
+                <a href="#home" class="nav-link text-white" onclick="showSection('home')">ホーム</a>
+                <a href="#guestLive" class="nav-link text-white" onclick="showSection('guestLive')">学生祭について</a>
+                <a href="#events" class="nav-link text-white" onclick="showSection('events')">イベント</a>
+                <a href="#contact" class="nav-link text-white" onclick="showSection('contact')">お問い合わせ</a>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#about">学生祭について</a></li>
-                <li><a href="#schedule">スケジュール</a></li>
-                <li><a href="#contact">お問い合わせ</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <section id="about" class="section">
-        <h2>学生祭について</h2>
-        <p>2024年の学生祭は、盛りだくさんのイベントでお届けします！音楽ライブや屋台、美術展示など、多彩なプログラムが盛りだくさんです。</p>
+    <!-- ホームセクション -->
+    <section id="home" class="section bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">ようこそ</h2>
+            <p class="text-center">愛媛大学医学祭へようこそ！</p>
+        </div>
     </section>
 
-    <section id="schedule" class="section">
-        <h2>スケジュール</h2>
-        <ul>
-            <li>10:00 AM - 開会式</li>
-            <li>11:00 AM - 音楽ライブ</li>
-            <li>1:00 PM - 屋台オープン</li>
-            <li>3:00 PM - ゲーム大会</li>
-            <li>5:00 PM - 閉会式</li>
-        </ul>
+    <!-- guestliveセクション -->
+    <section id="guestLive" class="section bg-light hidden">
+        <div class="container">
+            <h2 class="text-center mb-4">ゲストライブのお知らせ</h2>
+            <p class="text-center">このページはゲストライブのページです</p>
+        </div>
+        <img src="guest.png" alt="guest.img" width="600">
     </section>
 
-    <section id="contact" class="section">
-        <h2>お問い合わせ</h2>
-        <p>お問い合わせは以下のメールアドレスまでお願いします。</p>
-        <p><a href="mailto:j520334k@mails.cc.ehime-u.ac.jp">j520334k@mails.cc.ehime-u.ac.jp</a></p>
+    <!-- イベントセクション -->
+    <section id="events" class="section bg-light hidden">
+        <div class="container">
+            <h2 class="text-center mb-4">タイムテーブル</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <ul class="list-group">
+                        <li class="list-group-item">10:00 AM - 開会式</li>
+                        <li class="list-group-item">11:00 AM - 音楽ライブ</li>
+                        <li class="list-group-item">1:00 PM - 屋台オープン</li>
+                        <li class="list-group-item">3:00 PM - 医療体験セッション</li>
+                        <li class="list-group-item">5:00 PM - 閉会式</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <footer>
-        <p>&copy; 2024 学生祭実行委員会</p>
+    <!-- お問い合わせセクション -->
+    <section id="contact" class="section bg-light hidden">
+        <div class="container">
+            <h2 class="text-center mb-4">お問い合わせ</h2>
+            <p class="text-center">
+                ゲストライブについての問い合わせはこちらにお願いします<br>
+                <a href="mailto:guestkyoku@gmail.com">guestkyoku@gmail.com</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p>© 2025 学生祭実行委員会</p>
+        </div>
     </footer>
 
-    <script src="homepage.js"></script>
-</body>
+    <script src = "script.js"></script>
 
+</body>
 </html>
