@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="homepage.css">
+    <meta name="robots" content="index, follow">
     <title>第47回 愛媛大学医学祭</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
     <meta name="description" content="こんにちは！2025年0月0日に愛媛大学で医学祭を開催します。ぜひお越しください！">
@@ -13,11 +15,13 @@
             padding: 4rem 0;
             min-height: 50vh;
         }
+
         .hidden {
             display: none;
         }
     </style>
 </head>
+
 <body>
     <!-- ヘッダー部分 -->
     <header class="bg-dark text-white text-center py-4">
@@ -26,8 +30,9 @@
             <p class="lead">2025年 0月0日〜0日</p>
             <nav class="nav justify-content-center">
                 <a href="#home" class="nav-link text-white" onclick="showSection('home')">ホーム</a>
-                <a href="#guestLive" class="nav-link text-white" onclick="showSection('guestLive')">学生祭について</a>
-                <a href="#events" class="nav-link text-white" onclick="showSection('events')">イベント</a>
+                <a href="#guestLive" class="nav-link text-white" onclick="showSection('guestLive')">ゲストライブ</a>
+                <a href="#events" class="nav-link text-white" onclick="showSection('events')">企画の紹介</a>
+                <a href="#map" class="nav-link text-white" onclick="showSection('map')">区画マップ</a>
                 <a href="#contact" class="nav-link text-white" onclick="showSection('contact')">お問い合わせ</a>
             </nav>
         </div>
@@ -48,9 +53,16 @@
             <p class="text-center">このページはゲストライブのページです</p>
         </div>
         <img src="guest.png" alt="guest.img" width="600">
+        <footer class="bg-dark text-white text-center py-3">
+            <div class="container">
+                <p>© 2025 ゲストライブ実行委員会</p>
+            </div>
+        </footer>
     </section>
 
-    <!-- イベントセクション -->
+
+
+    <!-- 企画の紹介セクション -->
     <section id="events" class="section bg-light hidden">
         <div class="container">
             <h2 class="text-center mb-4">タイムテーブル</h2>
@@ -68,6 +80,16 @@
         </div>
     </section>
 
+    <!-- 区画マップセクション -->
+    <section id="map" class="section bg-light hidden">
+        <div class="container">
+            <h2 class="text-center mb-4">区画マップ</h2>
+            <p class="text-center">
+                準備中...
+            </p>
+        </div>
+    </section>
+
     <!-- お問い合わせセクション -->
     <section id="contact" class="section bg-light hidden">
         <div class="container">
@@ -80,13 +102,14 @@
     </section>
 
     <!-- フッター -->
-    <footer class="bg-dark text-white text-center py-3">
+    <footer id="mainFooter" class="bg-dark text-white text-center py-3">
         <div class="container">
             <p>© 2025 学生祭実行委員会</p>
         </div>
     </footer>
 
-    <script src = "script.js"></script>
+    <script src="script.js"></script>
 
 </body>
+
 </html>
