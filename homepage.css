@@ -45,6 +45,7 @@ header nav ul li a:hover {
     text-decoration: underline;
 }
 
+/* セクション共通のスタイル */
 .section {
     padding: 40px 20px;
     max-width: 1200px;
@@ -54,6 +55,12 @@ header nav ul li a:hover {
 .section h2 {
     font-size: 2rem;
     margin-bottom: 20px;
+}
+
+/* フッター専用のスタイル */
+#guestLive footer {
+    position: relative;
+    max-width: 1400px;  /* .sectionのmax-widthを上書き */
 }
 
 ul {
@@ -68,17 +75,17 @@ footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 10px;
-    position: fixed;
     width: 100%;
-    bottom: 0;
+    position: relative; /* 相対位置に変更 */
+    bottom: 0;         /* 下部に配置 */
+    margin-top: auto;  /* 上部の余白を自動調整 */
 }
 
 img {
+    display: block;
+    margin: 20px auto;
     max-width: 100%;
     height: auto;
-    margin: 0 auto;
-    display: block;
 }
 
 /* Responsive design */
@@ -105,9 +112,5 @@ img {
 
     footer {
         font-size: 0.8rem;
-    }
-    img {
-        max-width: 90%;
-        margin: 10px auto;
     }
 }
